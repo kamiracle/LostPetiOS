@@ -8,7 +8,7 @@
         <scene sceneID="QeE-xN-CS0">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ZGd-GK-eaB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ast-tC-XnL">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Ast-tC-XnL">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,35 +28,167 @@
                         <viewControllerLayoutGuide type="bottom" id="E6X-Gn-Sgu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U8E-7S-bgZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oj5-cQ-LSG">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj5-cQ-LSG">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Type" id="T3L-Tp-8uv">
+                                    <barButtonItem title="Found Pet" id="dTM-Y5-Wzb"/>
+                                    <barButtonItem title="Lost Pet" id="xVh-eh-rQL"/>
+                                    <barButtonItem title="Account" id="Kl4-FJ-5oh">
                                         <connections>
-                                            <action selector="changeMapType:" destination="eij-B1-nQH" id="vr8-3W-JbJ"/>
+                                            <segue destination="0L9-hi-llr" kind="modal" identifier="AccountSettings" id="OHL-nB-ISM"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="More" id="jb2-ym-p6z"/>
                                 </items>
+                                <color key="tintColor" red="0.58277428668478259" green="0.5737297809979458" blue="0.55839364694622617" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmY-aq-Yf7">
-                                <rect key="frame" x="0.0" y="63" width="320" height="461"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7aE-ea-Wo8" appends="YES" id="OUt-Zm-f8E"/>
+                                    <outletCollection property="gestureRecognizers" destination="nOd-6w-Hpf" appends="YES" id="8GR-8d-cde"/>
+                                    <outletCollection property="gestureRecognizers" destination="kwh-wt-3ds" appends="YES" id="TGa-lM-Gqi"/>
+                                    <outletCollection property="gestureRecognizers" destination="mlT-34-7oj" appends="YES" id="FrZ-If-UAw"/>
+                                    <outletCollection property="gestureRecognizers" destination="ca5-aR-OQP" appends="YES" id="fVk-mn-LKY"/>
+                                </connections>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.10476817255434778" green="0.1034906415302411" blue="0.10080545164317452" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="U71-Xn-LMe"/>
+                    <navigationItem key="navigationItem" id="U71-Xn-LMe">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Area" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" id="WaP-cF-1NU">
+                            <rect key="frame" x="11" y="7" width="298" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <action selector="textFieldReturn:" destination="eij-B1-nQH" eventType="editingDidEndOnExit" id="s3W-lW-atd"/>
+                            </connections>
+                        </textField>
+                    </navigationItem>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="mapView" destination="AmY-aq-Yf7" id="wf6-rV-gSw"/>
+                        <outlet property="searchText" destination="WaP-cF-1NU" id="Fd0-3l-oR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0J2-hT-MId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7aE-ea-Wo8"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nOd-6w-Hpf"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kwh-wt-3ds"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="mlT-34-7oj"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="ca5-aR-OQP"/>
             </objects>
             <point key="canvasLocation" x="314" y="64"/>
+        </scene>
+        <!--Navigation Controller - Account Settings-->
+        <scene sceneID="Kqt-rY-f88">
+            <objects>
+                <navigationController title="Account Settings" definesPresentationContext="YES" id="0L9-hi-llr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yx9-MP-fLM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Kx3-BL-elL" kind="relationship" relationship="rootViewController" id="AiC-h4-S8N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuI-8s-han" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="-290"/>
+        </scene>
+        <!--Account Table View Controller - Account Settings-->
+        <scene sceneID="kVa-pS-n0d">
+            <objects>
+                <tableViewController id="Kx3-BL-elL" customClass="AccountTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DTo-E6-GTy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" id="G1t-aF-ElB">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G1t-aF-ElB" id="PJt-X1-jbx">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kx3-BL-elL" id="gHq-Zh-eJM"/>
+                            <outlet property="delegate" destination="Kx3-BL-elL" id="uMc-7z-sSI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Account Settings" id="tF3-to-lhb">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="rFa-Db-SqT">
+                            <connections>
+                                <action selector="cancel:" destination="Kx3-BL-elL" id="Uiz-He-iNK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuA-Ea-51q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="-290"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5ai-VL-xzy">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="JXr-PX-TCI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SGq-xG-1oj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jTM-pN-cdN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gn7-h6-O0n" kind="relationship" relationship="rootViewController" id="3ic-C1-Ckb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzo-3O-Jcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="546"/>
+        </scene>
+        <!--List Table View Controller-->
+        <scene sceneID="kkb-2v-vNF">
+            <objects>
+                <tableViewController id="gn7-h6-O0n" customClass="ListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KzC-Sx-rNf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" id="Nmx-Tv-jOZ">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nmx-Tv-jOZ" id="LzC-i3-dJG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gn7-h6-O0n" id="w4V-bL-nZC"/>
+                            <outlet property="delegate" destination="gn7-h6-O0n" id="qJH-0s-z5q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jZK-ze-Qtd">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="DUp-OC-x5y">
+                            <connections>
+                                <action selector="backToMap:" destination="gn7-h6-O0n" id="mOE-Xl-htk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuQ-Go-JAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="546"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
