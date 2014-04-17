@@ -8,7 +8,7 @@
         <scene sceneID="QeE-xN-CS0">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ZGd-GK-eaB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Ast-tC-XnL">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="Ast-tC-XnL">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-180" y="60"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View Controller - LostPet-->
         <scene sceneID="bSY-JW-aJ6">
             <objects>
                 <viewController id="eij-B1-nQH" customClass="MapViewController" sceneMemberID="viewController">
@@ -28,64 +28,61 @@
                         <viewControllerLayoutGuide type="bottom" id="E6X-Gn-Sgu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U8E-7S-bgZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj5-cQ-LSG">
-                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Found Pet" id="dTM-Y5-Wzb"/>
-                                    <barButtonItem title="Lost Pet" id="xVh-eh-rQL"/>
+                                    <barButtonItem title="Found Pet" id="dTM-Y5-Wzb">
+                                        <connections>
+                                            <segue destination="fde-t9-j4X" kind="modal" identifier="FoundPetView" id="xhU-RH-djI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Lost Pet" id="xVh-eh-rQL">
+                                        <connections>
+                                            <segue destination="Cb7-VK-cfu" kind="modal" identifier="LostPetView" id="tMJ-3I-bLb"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Account" id="Kl4-FJ-5oh">
                                         <connections>
                                             <segue destination="0L9-hi-llr" kind="modal" identifier="AccountSettings" id="OHL-nB-ISM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="More" id="jb2-ym-p6z"/>
+                                    <barButtonItem title="More" id="jb2-ym-p6z">
+                                        <connections>
+                                            <segue destination="r7S-ZN-ue4" kind="modal" identifier="MoreView" id="b2L-Nv-hyU"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                                <color key="tintColor" red="0.58277428668478259" green="0.5737297809979458" blue="0.55839364694622617" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmY-aq-Yf7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="54" width="320" height="470"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7aE-ea-Wo8" appends="YES" id="OUt-Zm-f8E"/>
-                                    <outletCollection property="gestureRecognizers" destination="nOd-6w-Hpf" appends="YES" id="8GR-8d-cde"/>
-                                    <outletCollection property="gestureRecognizers" destination="kwh-wt-3ds" appends="YES" id="TGa-lM-Gqi"/>
-                                    <outletCollection property="gestureRecognizers" destination="mlT-34-7oj" appends="YES" id="FrZ-If-UAw"/>
-                                    <outletCollection property="gestureRecognizers" destination="ca5-aR-OQP" appends="YES" id="fVk-mn-LKY"/>
-                                </connections>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" red="0.10476817255434778" green="0.1034906415302411" blue="0.10080545164317452" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="U71-Xn-LMe">
-                        <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Area" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" id="WaP-cF-1NU">
-                            <rect key="frame" x="11" y="7" width="298" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <navigationItem key="navigationItem" title="LostPet" id="U71-Xn-LMe">
+                        <barButtonItem key="leftBarButtonItem" title="Satellite" id="BKm-Te-1ob">
                             <connections>
-                                <action selector="textFieldReturn:" destination="eij-B1-nQH" eventType="editingDidEndOnExit" id="s3W-lW-atd"/>
+                                <action selector="changeMapType:" destination="eij-B1-nQH" id="8HU-7Q-lKb"/>
                             </connections>
-                        </textField>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="List" id="WGw-X1-TEI">
+                            <connections>
+                                <segue destination="JXr-PX-TCI" kind="modal" identifier="ListView" id="wfL-pE-zWT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="mapView" destination="AmY-aq-Yf7" id="wf6-rV-gSw"/>
-                        <outlet property="searchText" destination="WaP-cF-1NU" id="Fd0-3l-oR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0J2-hT-MId" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7aE-ea-Wo8"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nOd-6w-Hpf"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kwh-wt-3ds"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="mlT-34-7oj"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="ca5-aR-OQP"/>
             </objects>
             <point key="canvasLocation" x="314" y="64"/>
         </scene>
@@ -102,7 +99,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuI-8s-han" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="-290"/>
+            <point key="canvasLocation" x="1205" y="-1162"/>
         </scene>
         <!--Account Table View Controller - Account Settings-->
         <scene sceneID="kVa-pS-n0d">
@@ -137,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuA-Ea-51q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-290"/>
+            <point key="canvasLocation" x="1703" y="-1162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5ai-VL-xzy">
@@ -153,9 +150,129 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzo-3O-Jcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="546"/>
+            <point key="canvasLocation" x="1205" y="-490"/>
         </scene>
-        <!--List Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="6sb-2z-Jma">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="fde-t9-j4X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Cd-LI-iKB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G4x-mu-nXt" kind="relationship" relationship="rootViewController" id="UcC-WH-hhw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rG-Je-sr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="179"/>
+        </scene>
+        <!--Found Pet View Controller - Found Pet-->
+        <scene sceneID="foG-rn-RWG">
+            <objects>
+                <viewController id="G4x-mu-nXt" customClass="FoundPetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ao3-RK-4Bq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kh1-so-4x8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1F1-Ca-8Yp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Found Pet" id="4zr-j5-f7P">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="VGT-Lt-gyN">
+                            <connections>
+                                <action selector="backToMap:" destination="G4x-mu-nXt" id="pxh-WM-bup"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VoC-jT-OwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H0m-wr-FeI">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Cb7-VK-cfu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h89-3m-5P9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DfH-uv-HkU" kind="relationship" relationship="rootViewController" id="ynT-qq-J5U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fol-f9-wr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="875"/>
+        </scene>
+        <!--Lost Pet View Controller - Lost Pet-->
+        <scene sceneID="74f-sW-plv">
+            <objects>
+                <viewController id="DfH-uv-HkU" customClass="LostPetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cn-uB-TAe"/>
+                        <viewControllerLayoutGuide type="bottom" id="LG2-02-2RB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ce0-hI-jGV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lost Pet" id="CYd-1C-rOo">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ldH-qE-xnq">
+                            <connections>
+                                <action selector="backToMap:" destination="DfH-uv-HkU" id="mmj-lJ-GB5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-3l-130" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="885"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bDd-1x-eUn">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="r7S-ZN-ue4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="euJ-Xp-5V3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j5a-oa-nyY" kind="relationship" relationship="rootViewController" id="UJb-Dr-HwY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5HD-XW-nf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="1645"/>
+        </scene>
+        <!--More View Controller - More-->
+        <scene sceneID="MLO-wA-1JJ">
+            <objects>
+                <viewController id="j5a-oa-nyY" customClass="MoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tHt-jg-Oy3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vam-gL-UQD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bGD-NR-q8B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More" id="4VB-QP-27x">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HsS-eJ-8KV">
+                            <connections>
+                                <action selector="backToMap:" destination="j5a-oa-nyY" id="vBd-61-V9D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02D-el-S9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="1645"/>
+        </scene>
+        <!--List Table View Controller - LostPet-->
         <scene sceneID="kkb-2v-vNF">
             <objects>
                 <tableViewController id="gn7-h6-O0n" customClass="ListTableViewController" sceneMemberID="viewController">
@@ -178,17 +295,17 @@
                             <outlet property="delegate" destination="gn7-h6-O0n" id="qJH-0s-z5q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jZK-ze-Qtd">
-                        <barButtonItem key="leftBarButtonItem" title="Map" id="DUp-OC-x5y">
+                    <navigationItem key="navigationItem" title="LostPet" id="jZK-ze-Qtd">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="BfY-jF-JO7">
                             <connections>
-                                <action selector="backToMap:" destination="gn7-h6-O0n" id="mOE-Xl-htk"/>
+                                <action selector="backToMap:" destination="gn7-h6-O0n" id="Eag-V9-5ya"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuQ-Go-JAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="546"/>
+            <point key="canvasLocation" x="1703" y="-490"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

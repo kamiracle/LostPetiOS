@@ -10,11 +10,13 @@
 
 @implementation PetAnnotation
 
--(id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title
+-(id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title subTitle:(NSString*)subTitle withPet:(Pet*)pet
 {
     if ((self = [super init])) {
         self.coordinate =coordinate;
         self.title = title;
+        self.subtitle = subTitle;
+        self.pet = pet;
         
     }
     return self;

@@ -28,6 +28,14 @@
 		2769C68318FA357900D8CF09 /* PetAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2769C68218FA357900D8CF09 /* PetAnnotation.m */; };
 		2769C68C18FB04F400D8CF09 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2769C68B18FB04F400D8CF09 /* AccountTableViewController.m */; };
 		2769C68F18FB4DD500D8CF09 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2769C68E18FB4DD500D8CF09 /* ListTableViewController.m */; };
+		27DA6B2818FDF18F00435780 /* FoundPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA6B2718FDF18F00435780 /* FoundPetViewController.m */; };
+		27DA6B2B18FDF19C00435780 /* LostPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA6B2A18FDF19C00435780 /* LostPetViewController.m */; };
+		27DA6B2E18FDF1AA00435780 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA6B2D18FDF1AA00435780 /* MoreViewController.m */; };
+		27DA6B3618FDFEF700435780 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA6B3518FDFEF700435780 /* Pet.m */; };
+		27DA6B3B18FE15D300435780 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DA6B3A18FE15D300435780 /* dog.png */; };
+		27DA6B3D18FF2D6E00435780 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DA6B3C18FF2D6E00435780 /* flag.png */; };
+		27DA6B4118FF4A2600435780 /* PetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA6B3F18FF4A2600435780 /* PetDetailViewController.m */; };
+		27DA6B4218FF4A2600435780 /* PetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DA6B4018FF4A2600435780 /* PetDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +80,19 @@
 		2769C68B18FB04F400D8CF09 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewController.m; sourceTree = "<group>"; };
 		2769C68D18FB4DD500D8CF09 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewController.h; path = ../ListTableViewController.h; sourceTree = "<group>"; };
 		2769C68E18FB4DD500D8CF09 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewController.m; path = ../ListTableViewController.m; sourceTree = "<group>"; };
+		27DA6B2618FDF18F00435780 /* FoundPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundPetViewController.h; sourceTree = "<group>"; };
+		27DA6B2718FDF18F00435780 /* FoundPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundPetViewController.m; sourceTree = "<group>"; };
+		27DA6B2918FDF19C00435780 /* LostPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostPetViewController.h; sourceTree = "<group>"; };
+		27DA6B2A18FDF19C00435780 /* LostPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostPetViewController.m; sourceTree = "<group>"; };
+		27DA6B2C18FDF1AA00435780 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		27DA6B2D18FDF1AA00435780 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		27DA6B3418FDFEF700435780 /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pet.h; path = ../Pet.h; sourceTree = "<group>"; };
+		27DA6B3518FDFEF700435780 /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pet.m; path = ../Pet.m; sourceTree = "<group>"; };
+		27DA6B3A18FE15D300435780 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		27DA6B3C18FF2D6E00435780 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag.png; path = Images.xcassets/MapCallouts/images/flag.png; sourceTree = "<group>"; };
+		27DA6B3E18FF4A2600435780 /* PetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailViewController.h; sourceTree = "<group>"; };
+		27DA6B3F18FF4A2600435780 /* PetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailViewController.m; sourceTree = "<group>"; };
+		27DA6B4018FF4A2600435780 /* PetDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2769C64618FA248500D8CF09 /* UIKit.framework in Frameworks */,
 				2769C68018FA286C00D8CF09 /* MapKit.framework in Frameworks */,
 				2769C64418FA248500D8CF09 /* CoreGraphics.framework in Frameworks */,
-				2769C64618FA248500D8CF09 /* UIKit.framework in Frameworks */,
 				2769C64218FA248500D8CF09 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,17 +154,28 @@
 		2769C64718FA248500D8CF09 /* LostPet */ = {
 			isa = PBXGroup;
 			children = (
-				2769C68118FA357900D8CF09 /* PetAnnotation.h */,
 				2769C68D18FB4DD500D8CF09 /* ListTableViewController.h */,
 				2769C68E18FB4DD500D8CF09 /* ListTableViewController.m */,
-				2769C68218FA357900D8CF09 /* PetAnnotation.m */,
 				2769C65018FA248500D8CF09 /* KAMAppDelegate.h */,
 				2769C65118FA248500D8CF09 /* KAMAppDelegate.m */,
 				2769C65318FA248500D8CF09 /* Main_iPhone.storyboard */,
+				27DA6B2618FDF18F00435780 /* FoundPetViewController.h */,
+				27DA6B2718FDF18F00435780 /* FoundPetViewController.m */,
+				27DA6B2918FDF19C00435780 /* LostPetViewController.h */,
+				27DA6B2A18FDF19C00435780 /* LostPetViewController.m */,
+				27DA6B2C18FDF1AA00435780 /* MoreViewController.h */,
+				27DA6B2D18FDF1AA00435780 /* MoreViewController.m */,
 				2769C68A18FB04F400D8CF09 /* AccountTableViewController.h */,
 				2769C68B18FB04F400D8CF09 /* AccountTableViewController.m */,
 				2769C67918FA269B00D8CF09 /* MapViewController.h */,
 				2769C67A18FA269B00D8CF09 /* MapViewController.m */,
+				27DA6B3E18FF4A2600435780 /* PetDetailViewController.h */,
+				27DA6B3F18FF4A2600435780 /* PetDetailViewController.m */,
+				27DA6B4018FF4A2600435780 /* PetDetailViewController.xib */,
+				27DA6B3418FDFEF700435780 /* Pet.h */,
+				27DA6B3518FDFEF700435780 /* Pet.m */,
+				2769C68118FA357900D8CF09 /* PetAnnotation.h */,
+				2769C68218FA357900D8CF09 /* PetAnnotation.m */,
 				2769C67C18FA26AB00D8CF09 /* ListViewController.h */,
 				2769C67D18FA26AB00D8CF09 /* ListViewController.m */,
 				2769C65618FA248500D8CF09 /* Main_iPad.storyboard */,
@@ -158,6 +190,8 @@
 		2769C64818FA248500D8CF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27DA6B3C18FF2D6E00435780 /* flag.png */,
+				27DA6B3A18FE15D300435780 /* dog.png */,
 				2769C64918FA248500D8CF09 /* LostPet-Info.plist */,
 				2769C64A18FA248500D8CF09 /* InfoPlist.strings */,
 				2769C64D18FA248500D8CF09 /* main.m */,
@@ -262,9 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2769C65818FA248500D8CF09 /* Main_iPad.storyboard in Resources */,
+				27DA6B3B18FE15D300435780 /* dog.png in Resources */,
 				2769C65D18FA248500D8CF09 /* Images.xcassets in Resources */,
+				27DA6B4218FF4A2600435780 /* PetDetailViewController.xib in Resources */,
 				2769C65518FA248500D8CF09 /* Main_iPhone.storyboard in Resources */,
 				2769C64C18FA248500D8CF09 /* InfoPlist.strings in Resources */,
+				27DA6B3D18FF2D6E00435780 /* flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +322,16 @@
 			files = (
 				2769C67E18FA26AB00D8CF09 /* ListViewController.m in Sources */,
 				2769C65218FA248500D8CF09 /* KAMAppDelegate.m in Sources */,
+				27DA6B2818FDF18F00435780 /* FoundPetViewController.m in Sources */,
 				2769C68318FA357900D8CF09 /* PetAnnotation.m in Sources */,
 				2769C64E18FA248500D8CF09 /* main.m in Sources */,
 				2769C65B18FA248500D8CF09 /* KAMViewController.m in Sources */,
+				27DA6B2B18FDF19C00435780 /* LostPetViewController.m in Sources */,
+				27DA6B4118FF4A2600435780 /* PetDetailViewController.m in Sources */,
 				2769C68C18FB04F400D8CF09 /* AccountTableViewController.m in Sources */,
 				2769C67B18FA269B00D8CF09 /* MapViewController.m in Sources */,
+				27DA6B3618FDFEF700435780 /* Pet.m in Sources */,
+				27DA6B2E18FDF1AA00435780 /* MoreViewController.m in Sources */,
 				2769C68F18FB4DD500D8CF09 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

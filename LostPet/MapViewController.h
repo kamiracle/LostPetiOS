@@ -11,8 +11,13 @@
 #import "PetAnnotation.h"
 #import "AccountTableViewController.h"
 #import "ListTableViewController.h"
+#import "LostPetViewController.h"
+#import "FoundPetViewController.h"
+#import "MoreViewController.h"
+#import "Pet.h"
+#import "PetDetailViewController.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, AccountTableViewControllerDelegate, ListTableViewControllerDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, AccountTableViewControllerDelegate, ListTableViewControllerDelegate, FoundPetViewControllerDelegate, LostPetViewControllerDelegate, MoreViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UITableView* newsTable;
 @property (nonatomic, retain) IBOutlet NSMutableArray *newsDataForTable;
@@ -20,5 +25,5 @@
 
 - (IBAction)textFieldReturn:(id)sender;
 - (void)changeMapType:(id)sender;
-- (void)addAnnotationToMap:(NSString*)petName withCoordinate:(CLLocationCoordinate2D)coord;
+- (void)addPetAnnotationToMap:(Pet*)pet;
 @end
